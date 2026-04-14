@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khusus Buat Yanti Sayang</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #fff5f5;
+            font-family: 'Quicksand', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .tulisan-tangan {
+            font-family: 'Caveat', cursive;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+        .hati-detak {
+            display: inline-block;
+            animation: heartbeat 1.2s infinite;
+            color: #ef4444;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .foto-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .kartu-cinta {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+            border: 2px solid #fee2e2;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-6 text-gray-800">
+
+    <div class="max-w-md w-full text-center space-y-10">
+        
+        <div class="space-y-2">
+            <h1 class="text-5xl md:text-6xl tulisan-tangan text-red-500 tracking-tight">
+                Hai Yan <span class="hati-detak">❤️</span>
+            </h1>
+            <p class="text-[10px] uppercase tracking-[0.4em] text-gray-500">
+                // Halaman ini cuma buat kamu //
+            </p>
+        </div>
+
+        <div class="relative inline-block foto-float">
+            <div class="w-56 h-56 md:w-72 md:h-72 mx-auto rounded-full overflow-hidden border-8 border-white shadow-2xl">
+                <img src="yanti2.png" 
+                     class="w-full h-full object-cover">
+            </div>
+            <div class="absolute -bottom-2 -right-2 bg-red-400 text-white p-3 rounded-full text-xl shadow-lg font-bold">
+                💖
+            </div>
+        </div>
+
+        <div class="kartu-cinta p-8 space-y-5">
+            <p class="text-xl italic leading-relaxed text-gray-700">
+                "Yayan story my life ."
+            </p>
+            <div class="h-[1px] w-1/2 bg-red-100 mx-auto"></div>
+            <p class="font-bold text-red-500 tracking-widest uppercase text-xs">
+                bingung haha apa we lah nu penting mah kamu sing sehat terus.
+            </p>
+        </div>
+
+        <div class="pt-6">
+            <button onclick="munculPesan()" 
+                    class="bg-red-500 text-white px-10 py-5 rounded-full font-bold shadow-lg text-lg active:scale-95 transition-all hover:bg-red-600">
+                Klik Ini Kalo Kamu Kangen ❤️
+            </button>
+        </div>
+
+        <div id="pesan-kangen" class="hidden mt-8 p-6 bg-white rounded-xl border-2 border-dashed border-red-300 text-center tulisan-tangan text-3xl text-red-600 shadow-inner">
+            Aku Lebih Kangen Lagi! ❤️❤️❤️
+        </div>
+
+    </div>
+
+    <footer class="mt-24 mb-10 text-center text-[10px] text-gray-400 uppercase tracking-[0.3em]">
+        Dibuat dengan sayang oleh Cowok kamu.
+    </footer>
+
+    <script>
+        function munculPesan() {
+            const pesan = document.getElementById('pesan-kangen');
+            pesan.classList.remove('hidden');
+            
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+</html>
